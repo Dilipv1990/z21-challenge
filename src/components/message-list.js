@@ -1,6 +1,6 @@
 import Api from '../api'
 import AppBar from '@material-ui/core/AppBar';
-import Button from '@material-ui/core/Button'
+import Button from '@material-ui/core/Button';
 import CustomizedSnackbars from './snackbar/snackbar';
 import Grid from '@material-ui/core/Grid';
 import React, { Component } from 'react';
@@ -168,4 +168,4 @@ class MessageList extends Component {
   }
 }
 
-export default MessageList
+export default MessageList;

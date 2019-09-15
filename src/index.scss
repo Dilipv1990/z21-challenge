@@ -2,6 +2,7 @@ body {
   margin: 0px;
   button.MuiButtonBase-root.btn-action {
     margin: 10px;
+    background-color: #00E2C4;
   }
   header h6.MuiTypography-h6 {
     background-color: white;
@@ -35,5 +36,8 @@ body {
         text-transform: capitalize;
       }
     }
+  }
+  .MuiSnackbar-root.MuiSnackbar-anchorOriginTopCenter {
+    top: 8px;
   }
 }

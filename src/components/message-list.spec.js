@@ -1,7 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import MessageList from './message-list';
-import toJson from 'enzyme-to-json';
+import Button from '@material-ui/core/Button';
+import AppBar from '@material-ui/core/AppBar';
+import Typography from '@material-ui/core/Typography';
 
 const wrapper = shallow(<MessageList />);
 describe('MessageList component test with Enzyme', () => {
@@ -17,4 +19,22 @@ describe('MessageList component test with Enzyme', () => {
 
     });
 
+    it('contains start and clear buttons', () => {
+      const [startButton, clearButton, ...others] = wrapper.find(Button);
+
+      expect(Object.keys(startButton.props).sort()).toEqual(['children','className', 'color', 'onClick', 'variant']);
+      expect(Object.keys(clearButton.props).sort()).toEqual(['children','className', 'color', 'onClick', 'variant']);
+
+      expect(startButton.props.children).toEqual('Stop Messages');
+      expect(clearButton.props.children).toEqual('Clear');
+      });
+
+    it('contains AppBar from material-ui', () => {
+      const appBar = wrapper.find(AppBar);
+      expect(appBar.length).toBe(1);
+
+      const heading = appBar.find(Typography);
+      expect(heading.length).toBe(1);
+      expect(heading.props().children).toBe('Help.com coding challenge')
+    });
 });
