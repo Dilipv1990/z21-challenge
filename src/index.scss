@@ -1,0 +1,39 @@
+body {
+  margin: 0px;
+  button.MuiButtonBase-root.btn-action {
+    margin: 10px;
+  }
+  header h6.MuiTypography-h6 {
+    background-color: white;
+    color: black;
+    padding: 10px 10px 10px 40px;
+  }
+  .action-box {
+    text-align: center;
+    margin: 10px;
+  }
+  .message-container {
+    padding: 0 100px 0 100px;
+
+    .msg-box {
+      align-items: center;
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+
+      &.error {
+        background-color: #F56236;
+      }
+      &.warning {
+        background-color: #FCE788;
+      }
+      &.info {
+        background-color: #88FCA3;
+      }
+
+      button {
+        text-transform: capitalize;
+      }
+    }
+  }
+}

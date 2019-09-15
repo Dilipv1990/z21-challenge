@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Customized Snackbar component test with Enzyme renders without crashing 1`] = `
+<div>
+  <WithStyles(ForwardRef(Snackbar))
+    anchorOrigin={
+      Object {
+        "horizontal": "center",
+        "vertical": "top",
+      }
+    }
+    autoHideDuration={6000}
+    onClose={[MockFunction]}
+  >
+    <MySnackbarContentWrapper
+      message="err message"
+      onClose={[MockFunction]}
+      variant="error"
+    />
+  </WithStyles(ForwardRef(Snackbar))>
+</div>
+`;
